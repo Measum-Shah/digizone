@@ -13,14 +13,41 @@ const cn = (...inputs) => twMerge(clsx(inputs));
 // Note: In a live Next.js app, this data would typically be imported:
 // import { teamMembers } from "../../lib/data";
 const teamMembers = [
-    { id: 1, name: "Dr. Evelyn Reed", role: "Chief Technology Officer", imageQuery: "portrait, software engineer, dark background", bio: "Leads technical strategy and innovation for all core products." },
-    { id: 2, name: "Mark O'Connell", role: "Lead Solutions Architect", imageQuery: "portrait, data analyst, blue lighting", bio: "Specializes in scalable cloud architectures and microservices." },
-    { id: 3, name: "Aisha Khan", role: "Senior UX/UI Designer", imageQuery: "portrait, product designer, modern office", bio: "Focuses on user-centric design principles and interaction fluidity." },
-    // Corrected data structure (removed duplicate 'role')
-    { id: 4, name: "David Chen", role: "Machine Learning Engineer", imageQuery: "portrait, ai researcher, dark studio", bio: "Develops and deploys next-gen AI models for automated workflows." },
-    { id: 5, name: "Sara Lopez", role: "DevOps Specialist", imageQuery: "portrait, devops engineer, server room", bio: "Manages CI/CD pipelines and infrastructure automation." },
-    { id: 6, name: "Ethan Jones", role: "Full-Stack Developer", imageQuery: "portrait, developer, casual shirt", bio: "Expert in Next.js, Go, and high-performance database queries." },
+  { id: 1, name: "Huzaif Ihsan", role: "Chief Executive Officer",
+    imageUrl: "/images/team/huzaifa.jpeg",
+    bio: "Drives company vision, oversees product direction, and leads strategic partnerships to scale the business."
+  },
+  { id: 2, name: "Shazim Ali Tahir", role: "Frontend Web Developer",
+    imageUrl: "/images/team/Shazim.jpeg",
+    bio: "Builds responsive user interfaces, optimizes frontend performance, and maintains design system consistency using modern JS frameworks."
+  },
+  { id: 3, name: "Sarmad Rafique", role: "Marketing Manager",
+    imageUrl: "/images/team/sarmad.jpeg",
+    bio: "Plans brand campaigns, manages digital presence, analyzes market trends, and improves customer engagement through data-driven strategies."
+  },
+  { id: 4, name: "Measum Shah", role: "Full Stack Developer",
+    imageUrl: "/images/team/measum.jpeg",
+    bio: "Develops end-to-end features across frontend and backend, integrates APIs, manages databases, and ensures smooth deployment."
+  },
+  { id: 5, name: "Rafay Ali", role: "Web Specialist",
+    imageUrl: "/images/team/rafay.png",
+    bio: "Handles website optimization, server configuration, security audits, domain management, and ensures 99%+ uptime with scalable hosting."
+  },
+  { id: 6, name: "Sheheryar", role: "Full-Stack Developer",
+    imageUrl: "/images/team/sheheryar.jpg",
+    bio: "Implements secure backend logic, builds dynamic UIs, writes efficient queries, and delivers seamless cross-platform web solutions."
+  },
+  { id: 7, name: "Anas Asghar", role: "Mobile App Developer",
+    imageUrl: "/images/team/anas.jpg",
+    bio: "Develops Android & iOS applications, manages app state, ensures API connectivity, and publishes stable builds to app stores."
+  },
+  { id: 8, name: "Saad Riaz", role: "Software Quality Assurance Eng.(Tester)",
+    imageUrl: "/images/team/saad.png",
+    bio: "Designs test cases, executes manual & automated testing, tracks bugs, verifies fixes, and ensures product reliability before release."
+  }
 ];
+
+
 
 // Combine the list multiple times for seamless, long-duration infinite scroll
 const MARQUEE_COUNT = 3;
@@ -39,7 +66,7 @@ const DURATION = 50; // Total duration in seconds for one full loop
 // --- TEAM CARD COMPONENT ---
 const TeamCard = ({ member }) => {
     // Dynamic Image URL using Unsplash
-    const imageUrl = `https://source.unsplash.com/random/300x300/?${member.imageQuery}`;
+ 
     const fallbackImage = `https://placehold.co/300x300/1e293b/94a3b8?text=Team`;
 
     return (
@@ -53,7 +80,7 @@ const TeamCard = ({ member }) => {
                 {/* Avatar */}
                 <div className="relative w-32 h-32 rounded-full overflow-hidden shadow-xl ring-4 ring-sky-500/30">
                     <img
-                        src={imageUrl}
+                        src={member.imageUrl}
                         alt={member.name}
                         onError={(e) => { e.target.src = fallbackImage }}
                         className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"

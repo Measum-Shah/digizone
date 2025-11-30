@@ -24,59 +24,58 @@ const SectionHeading = ({ title, subtitle, className }) => (
 const allProjects = [
   { 
     id: 1, 
-    title: "FusionFlow SaaS Platform", 
-    description: "Built a fully scalable, multi-tenant SaaS application integrating next-gen AI for automated workflow generation.", 
-    tags: ["Next.js", "AI/ML", "Prisma", "AWS"],
-    imageQuery: "futuristic-dashboard-ui", // Unsplash keyword
+    title: "Crypto Price Prediction Web App", 
+    description: "Built a fully scalable, crupto prediction web app, which uses a crypto prediction AI model made by us to predict crypto prices(mainly by historical data,realtime data and sentimental analysis), this also have user dashboard with clean user interface.", 
+    tags: ["React.js", "AI/ML", "Mongodb", "Express.js"],
+    imageUrl: "/images/portfolio/project1.png", 
     featured: true,
   },
   { 
     id: 2, 
-    title: "Apex FinTech App", 
-    description: "A secure, modern mobile application providing real-time investment tracking and algorithmic trading insights.", 
-    tags: ["React Native", "TypeScript", "Microservices"],
-    imageQuery: "mobile-banking-app",
+    title: "Technology World", 
+    description: "A secure, modern blogging web application with admin dashboard for managing users and blogs, with excellent user interface and experience.", 
+    tags: ["React", "TypeScript", "Express.js"],
+    imageUrl: "/images/portfolio/project2.png",
     featured: false,
   },
-  { 
+ { 
     id: 3, 
-    title: "Aura Design Agency", 
-    description: "High-performance, visually stunning corporate website utilizing custom animations and a headless CMS.", 
-    tags: ["Next.js", "Framer Motion", "Contentful"],
-    imageQuery: "abstract-geometric-design",
+    title: "Point of Sale Desktop App", 
+    description: "A robust, user-friendly desktop application designed for fast, reliable transaction processing and inventory management in retail environments.", 
+    tags: ["Python", "Tkinter", "Sql-lite"],
+    imageUrl: "/images/portfolio/project3.jpeg",
     featured: false,
-  },
+},
   { 
     id: 4, 
-    title: "EcoSense Wellness", 
-    description: "Developed a cross-platform health tracking app focusing on intuitive UX and seamless data visualization.", 
-    tags: ["Flutter", "GraphQL", "Data Viz"],
-    imageQuery: "health-app-interface",
+    title: "Report Managing Web App", 
+    description: "Developed a Report Managing Dashboard focusing on intuitive UX and seamless data management.", 
+    tags: ["React.js", "Node.js", "Mongodb"],
+    imageUrl: "/images/portfolio/project4.png",
     featured: false,
   },
   { 
     id: 5, 
-    title: "DevOps Automation", 
-    description: "Internal tools built to automate deployment pipelines, reducing release cycles by 40%.", 
-    tags: ["Python", "Kubernetes", "CI/CD"],
-    imageQuery: "cloud-server-technology",
+    title: "Youtube Video Automation tool", 
+   description: "A tool to automate YouTube video uploads,it streamlines repetitive tasks such as video publishing, title/description updates, and playlist organization, saving creators time and effort.",
+    tags: ["n8n", "react.js", "express.js"],
+    imageUrl: "/images/portfolio/project5.png",
     featured: false,
   },
   { 
     id: 6,
-    title: "Quantum E-Commerce", 
-    description: "High-speed custom API layer for global e-commerce operations, focused on latency and redundancy.", 
-    tags: ["Go", "Kafka", "PostgreSQL"],
-    imageQuery: "coding-screen-dark",
+    title: "Portfolio Admin Dashboard", 
+    description: "It Helps user to manage their projects, testomonials, messages,experience and skills all through a single dashboard.", 
+    tags: ["Next.js", "Mongodb", "Cloudinary"],
+    imageUrl: "/images/portfolio/project6.png",
     featured: false,
   },
-  // New Project Added
-  {
+  { 
     id: 7,
-    title: "Sentinel Security AI",
-    description: "Real-time threat detection system using edge computing and custom machine learning models for industrial IoT.",
-    tags: ["Edge AI", "TensorFlow", "Go", "IoT"],
-    imageQuery: "security-camera-network",
+    title: "Boutique Management Desktop App",
+    description: "A desktop application designed for boutique shops to manage inventory. It supports product categorization, invoice generation.",
+    tags: ["Tkinter", "Python", "sqlite"],
+    imageUrl: "/images/portfolio/project7.jpeg",
     featured: false,
   },
 ];
@@ -162,7 +161,7 @@ const ProjectCard3D = ({ item, index }) => {
             <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
-                src={imageUrl} 
+                src={item.imageUrl} 
                 alt={item.title}
                 onError={(e) => { e.target.src = fallbackImage }}
                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"

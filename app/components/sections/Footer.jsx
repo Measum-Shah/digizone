@@ -40,9 +40,9 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-4">
-          <a href="#" className="hover:text-cyan-400"><FacebookIcon className="transition-all"/></a>
-          <a href="#" className="hover:text-cyan-400"><LinkedInIcon className="transition-all"/></a>
-          <a href="#" className="hover:text-cyan-400"><GithubIcon className="transition-all"/></a>
+          <a href="https://www.facebook.com/profile.php?id=61583529225023" className="hover:text-cyan-400"><FacebookIcon className="transition-all"/></a>
+          <a href="https://www.linkedin.com/company/digizone-solutions7" className="hover:text-cyan-400"><LinkedInIcon className="transition-all"/></a>
+          <a href="https://github.com/Measum-Shah/" className="hover:text-cyan-400"><GithubIcon className="transition-all"/></a>
         </div>
 
         <p className="text-[9px] text-slate-400/40">
